@@ -10,6 +10,7 @@ The positions on the board are occupied exclusively by:
 - (C) Wooden sword symbolizing Courage
 - (G) Handkerchief symbolizing Kindness
 - (R) Broom which symbolizes Respect
+
 In an initial configuration, an arbitrary number of elements are arranged on the board
 S,U,C,G,R. Each Sempai has associated 4 integer values relating to humility, courage,
 kindness and respect at the beginning all equal to zero. The game consists of reaching the
