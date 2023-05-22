@@ -28,6 +28,7 @@ when there is only one Sempai on the board.
 
 ###Configuration 
 The configuration is stored in a file that has the following structure
+
 N = 10
 D = {
   S={{2,4},{3,8},{4,1},{9,6}},
@@ -36,6 +37,7 @@ D = {
   G={{4,3},
   R={{8,7},{6,1},{4,5}}
 }
+
 N is the size of the board D, Each list contains the coordinates of the elements
 present in the chessboard. The program can output the list of configurations up to
 final configuration or just the final configuration.
