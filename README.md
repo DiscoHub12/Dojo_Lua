@@ -1,7 +1,7 @@
 # Dojo_Lua
 Functional programming project 3 Year Camerino University.
 
-##Dojo
+## Dojo
 In Japanese culture the Dojo is the space where students practice to reach
 the balance between mind and body. Space is represented by a square chessboard with side N.
 The positions on the board are occupied exclusively by:
@@ -26,17 +26,17 @@ where n and m are the positions on the Sempai board.
 The minor value associated with the Sempia disappears from the board. A configuration is said to be final
 when there is only one Sempai on the board.
 
-###Configuration 
+### Configuration 
 The configuration is stored in a file that has the following structure
 
-N = 10
-D = {
-  S={{2,4},{3,8},{4,1},{9,6}},
-  U={{7,7},{1,1}},
-  C={{5,1},{9,9}},
-  G={{4,3},
-  R={{8,7},{6,1},{4,5}}
-}
+N = 10<br>
+D = {<br>
+  S={{2,4},{3,8},{4,1},{9,6}},<br>
+  U={{7,7},{1,1}},<br>
+  C={{5,1},{9,9}},<br>
+  G={{4,3},<br>
+  R={{8,7},{6,1},{4,5}}<br>
+}<br>
 
 N is the size of the board D, Each list contains the coordinates of the elements
 present in the chessboard. The program can output the list of configurations up to
