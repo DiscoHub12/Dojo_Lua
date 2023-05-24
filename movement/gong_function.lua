@@ -1,5 +1,4 @@
 local tableFunctions = require('matrix.matrix_functions');
-local sempaiFunctions = require('sempai.sempai_functions');
 local movementFunctions = require('movement.movement_functions');
 local cloneFunctions = require('utils.clone_functions');
 local printFunctions = require('utils.print_functions');
@@ -84,35 +83,41 @@ local function moveToNearest(matrix, sempai, nearest)
     return newMatrix;
 end
 
-function M.gongTwo(matrix)
+function M.gong(matrix)
     local newMatrix = cloneFunctions.cloneMatrix(matrix);
     local sempaiList = tableFunctions.getSempaiList(matrix);
 
     while #sempaiList > 0 do
         for i = #sempaiList, 1, -1 do
             local s = sempaiList[i];
+
             local nearest = minPathToProperty(newMatrix, s);
             if nearest then
                 newMatrix = moveToNearest(newMatrix, s, nearest);
-                nearest = minPathToProperty(newMatrix, s);
                 table.remove(sempaiList, i);
+                printFunctions.printMatrix(newMatrix);
                 break;
             else
                 nearest = minPathToSempai(newMatrix, s);
                 if nearest then
                     newMatrix = moveToNearest(newMatrix, s, nearest);
-                    nearest = minPathToSempai(newMatrix, s);
                     table.remove(sempaiList, i);
+                    printFunctions.printMatrix(newMatrix);
                     break;
                 end
             end
+
         end
     end
     if isSingle(newMatrix) == false then
-        newMatrix = M.gongTwo(newMatrix);
+        newMatrix = M.gong(newMatrix);
     end
     return newMatrix;
 end
+
+return M;
+
+--[[
 
 function M.gong(matrix)
     local newMatrix = cloneFunctions.cloneMatrix(matrix);
@@ -171,5 +176,4 @@ function M.gong(matrix)
     end
     return newMatrix;
 end
-
-return M;
+]]

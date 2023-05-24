@@ -14,12 +14,16 @@ function M.initConfigurationProject(configuration)
     if configuration == nil or configuration.N < 10 or configuration.D == nil then
         return nil
     end
-    
+
     local matrix = tableFunctions.createMatrix(configuration.N)
     for letter, coordinates in pairs(configuration.D) do
         if letter == "S" then
             for _, coord in ipairs(coordinates) do
-                local sempai = sempaiFunctions.createSempai(coord[1], coord[2])
+                local sempai = sempaiFunctions.createSempai(coord[1], coord[2]);
+                sempai.umilta = (coord[3]);
+                sempai.coraggio = (coord[4]);
+                sempai.gentilezza = (coord[5]);
+                sempai.rispetto = (coord[6]);
                 matrix = tableFunctions.insertSempai(matrix, sempai, coord[1], coord[2])
             end
         else

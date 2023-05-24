@@ -22,7 +22,7 @@ function M.moveUp(matrix, sempai)
                 newMatrix = tableFunctions.removeElement(newMatrix, element, newSempai.x, newSempai.y);
                 newMatrix = tableFunctions.insertSempai(newMatrix, newSempai, newSempai.x, newSempai.y);
             else
-                newMatrix = clashFunctions.warSempai(newMatrix, newSempai, element);
+                newMatrix = clashFunctions.warSempai2(newMatrix, newSempai, element);
             end
         end
     end
@@ -46,7 +46,7 @@ function M.moveDown(matrix, sempai)
                 newMatrix = tableFunctions.removeElement(newMatrix, element, newSempai.x, newSempai.y);
                 newMatrix = tableFunctions.insertSempai(newMatrix, newSempai, newSempai.x, newSempai.y);
             else
-                newMatrix = clashFunctions.warSempai(newMatrix, newSempai, element);
+                newMatrix = clashFunctions.warSempai2(newMatrix, newSempai, element);
             end
         end
     end
@@ -70,7 +70,7 @@ function M.moveLeft(matrix, sempai)
                 newMatrix = tableFunctions.removeElement(newMatrix, element, newSempai.x, newSempai.y);
                 newMatrix = tableFunctions.insertSempai(newMatrix, newSempai, newSempai.x, newSempai.y);
             else
-                newMatrix = clashFunctions.warSempai(newMatrix, newSempai, element);
+                newMatrix = clashFunctions.warSempai2(newMatrix, newSempai, element);
             end
         end
     end
@@ -94,7 +94,7 @@ function M.moveRight(matrix, sempai)
                 newMatrix = tableFunctions.removeElement(newMatrix, element, newSempai.x, newSempai.y);
                 newMatrix = tableFunctions.insertSempai(newMatrix, newSempai, newSempai.x, newSempai.y);
             else
-                newMatrix = clashFunctions.warSempai(newMatrix, newSempai, element);
+                newMatrix = clashFunctions.warSempai2(newMatrix, newSempai, element);
             end
         end
     end
